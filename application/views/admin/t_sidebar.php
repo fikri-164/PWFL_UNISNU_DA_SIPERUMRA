@@ -41,7 +41,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="<?php echo base_url('welcome/admin'); ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -63,10 +63,23 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Jenis-jenis UMKM:</h6>
-            <a class="collapse-item" href="buttons.html">UMKM Mebel</a>
-            <a class="collapse-item" href="cards.html">UMKM Kuliner</a>
-            <a class="collapse-item" href="cards.html">UMKM Fashion</a>
-            <a class="collapse-item" href="cards.html">UMKM Kerajinan</a>
+
+            <a class="collapse-item" href="<?php echo base_url('welcome/umkm_mebel'); ?>">
+              <i class="fas fa-fw fa-chair"></i>
+              UMKM Mebel
+            </a>
+            <a class="collapse-item" href="<?php echo base_url('welcome/umkm_kuliner'); ?>">
+              <i class="fas fa-fw fa-drumstick-bite"></i>
+              UMKM Kuliner
+            </a>
+            <a class="collapse-item" href="<?php echo base_url('welcome/umkm_fashion'); ?>">
+              <i class="fas fa-fw fa-tshirt"></i>
+              UMKM Fashion
+            </a>
+            <a class="collapse-item" href="<?php echo base_url('welcome/umkm_kerajinan'); ?>">
+              <i class="fas fa-fw fa-shapes"></i>
+              UMKM Kerajinan
+            </a>
           </div>
         </div>
       </li>
@@ -80,8 +93,14 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Jenis User:</h6>
-            <a class="collapse-item" href="utilities-color.html">Admin</a>
-            <a class="collapse-item" href="utilities-border.html">UMKM</a>
+            <a class="collapse-item" href="utilities-color.html">
+              <i class="fas fa-fw fa-user-alt"></i>
+            Admin
+            </a>
+            <a class="collapse-item" href="utilities-border.html">
+              <i class="fas fa-fw fa-users"></i>
+            UMKM
+            </a>
           </div>
         </div>
       </li>
@@ -100,17 +119,15 @@
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Pages</span>
-        </a>
+        <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url('welcome/profil'); ?>">
+          <i class="fas fa-fw fa-globe"></i>
+          <span>Lihat Web</span></a>
+      </li>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="login.html">Login</a>
-            <a class="collapse-item" href="register.html">Register</a>
-            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+            <h6 class="collapse-header">User Menu : </h6>
+            <a class="collapse-item" href="login.html">Lihat WEB</a>
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">Other Pages:</h6>
             <a class="collapse-item" href="404.html">404 Page</a>
