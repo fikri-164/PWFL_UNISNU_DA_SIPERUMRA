@@ -4,8 +4,8 @@
   <title>SI PERUMRA | Dashboard</title>
 </head>
 <body>
-        <div class="container-fluid">
-          <h1 class="h3 mb-2 text-gray-800">DAFTAR UMKM KULINER</h1>
+         <div class="container-fluid">
+          <h1 class="h3 mb-2 text-gray-800">DAFTAR UMKM KERAJINAN</h1>
           <div class="card shadow mb-4">
             </a>
             </div>
@@ -21,9 +21,9 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Korean Food</td>
-                      <td>Cahya Setyowati</td>
-                      <td>Tahunan</td>
+                      <td>Kerajinan Handmadeku</td>
+                      <td>Retno NC</td>
+                      <td>Demaan</td>
                     </tr>
                   </tbody>
                 </table>
