@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
+  <link rel="shortcut icon" href="<?php echo base_url('assets/img/SI PERUMRA.png') ?>">
   <!-- <title>Sistem Informasi Persebaran UMKM</title> -->
 
   <!-- Custom fonts for this template-->
@@ -17,6 +17,7 @@
 
   <!-- Custom styles for this template-->
   <link href="<?php echo base_url('assets/css/sb-admin-2.min.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/ckeditor/ckeditor.js'); ?>" rel="stylesheet">
 
 </head>
 
@@ -41,7 +42,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo base_url('welcome/admin'); ?>">
+        <a class="nav-link" href="<?php echo base_url('c_page/admin'); ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -64,19 +65,19 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Jenis-jenis UMKM:</h6>
 
-            <a class="collapse-item" href="<?php echo base_url('welcome/umkm_mebel'); ?>">
+            <a class="collapse-item" href="<?php echo base_url('c_page/umkm_mebel'); ?>">
               <i class="fas fa-fw fa-chair"></i>
               UMKM Mebel
             </a>
-            <a class="collapse-item" href="<?php echo base_url('welcome/umkm_kuliner'); ?>">
+            <a class="collapse-item" href="<?php echo base_url('c_page/umkm_kuliner'); ?>">
               <i class="fas fa-fw fa-drumstick-bite"></i>
               UMKM Kuliner
             </a>
-            <a class="collapse-item" href="<?php echo base_url('welcome/umkm_fashion'); ?>">
+            <a class="collapse-item" href="<?php echo base_url('c_page/umkm_fashion'); ?>">
               <i class="fas fa-fw fa-tshirt"></i>
               UMKM Fashion
             </a>
-            <a class="collapse-item" href="<?php echo base_url('welcome/umkm_kerajinan'); ?>">
+            <a class="collapse-item" href="<?php echo base_url('c_page/umkm_kerajinan'); ?>">
               <i class="fas fa-fw fa-shapes"></i>
               UMKM Kerajinan
             </a>
@@ -105,7 +106,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('welcome/profil'); ?>">
+        <a class="nav-link" href="<?php echo base_url('c_page/profil'); ?>">
           <i class="fas fa-fw fa-table"></i>
           <span>Tentang Kami</span></a>
       </li>
@@ -120,7 +121,7 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('welcome/profil'); ?>">
+        <a class="nav-link" href="<?php echo base_url('c_page/web'); ?>">
           <i class="fas fa-fw fa-globe"></i>
           <span>Lihat Web</span></a>
       </li>
