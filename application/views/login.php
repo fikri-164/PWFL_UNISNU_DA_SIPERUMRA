@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
-  <title>SB Admin 2 - Login</title>
+  <link rel="shortcut icon" href="<?php echo base_url('assets/img/SI PERUMRA.png') ?>">
+  <title>SI PERUMRA - Login</title>
 
   <!-- Custom fonts for this template-->
   <link href="<?= base_url('assets/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css">
@@ -35,25 +35,34 @@
             <!-- Nested Row within Card Body -->
             <div class="row">
               <div class="col-lg-6 d-none d-lg-block ">
-                <img style="margin:20px " width="100%" src="<?php echo base_url('assets/img/produk.jpg'); ?>">
+                <img style="margin:20px " width="100%" src="<?php echo base_url('assets/img/SI PERUMRA.PNG'); ?>">
               </div>
               <div class="col-lg-6">
                 <div class="p-5">
 
                   <div class="text-center">
-                  <img src="assets/img/produk.jpg" width="80px" ><br/>
-                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                  <img src="<?php echo base_url('assets/img/SI PERUMRA.PNG'); ?>" width="80px" ><br/>
+                    <h1 class="h4 text-gray-900 mb-4">Selamat Datang!</h1>
                   </div>
-                  <form class="user" action="welcome/admin" method="post">
-                    <div class="form-group">
-                      <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                  <form action="<?php echo base_url('c_login/login'); ?>" method="post">
+                    <center><b>NAMA UMKM</b></center>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="nav-icon fa fa-user"></i>
+                        </span>
+                      </div>
+                      <input class="form-control" type="text" placeholder="Nama UMKM" name="nama_umkm">
                     </div>
-                    <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                    <center><b>PASSWORD</b></center>
+                    <div class="input-group mb-4">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="nav-icon fa fa-lock"></i>
+                        </span>
+                      </div>
+                      <input class="form-control" type="password" placeholder="Password" name="password">
                     </div>
-                    <!-- <a href="index.html" class="btn btn-primary btn-user btn-block">
-                      Login
-                    </a> -->
                     <button class="btn btn-primary btn-user btn-block" type="summit">Login</button>
                   </form>
                   <hr>
