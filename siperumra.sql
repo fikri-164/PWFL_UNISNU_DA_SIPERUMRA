@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: 28 Okt 2019 pada 08.27
+=======
+-- Generation Time: 22 Okt 2019 pada 09.57
+>>>>>>> f8d9e1b0c1840139c46674e382b2353fa6fd999a
 -- Versi Server: 10.1.28-MariaDB
 -- PHP Version: 5.6.32
 
@@ -25,6 +29,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Struktur dari tabel `poduk`
 --
 
@@ -54,6 +59,8 @@ CREATE TABLE `umkm` (
 -- --------------------------------------------------------
 
 --
+=======
+>>>>>>> f8d9e1b0c1840139c46674e382b2353fa6fd999a
 -- Struktur dari tabel `user`
 --
 
@@ -77,6 +84,7 @@ INSERT INTO `user` (`id`, `nama_pemilik`, `nama_umkm`, `password`, `level`) VALU
 --
 
 --
+<<<<<<< HEAD
 -- Indexes for table `poduk`
 --
 ALTER TABLE `poduk`
@@ -89,6 +97,8 @@ ALTER TABLE `umkm`
   ADD PRIMARY KEY (`id`);
 
 --
+=======
+>>>>>>> f8d9e1b0c1840139c46674e382b2353fa6fd999a
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -99,6 +109,7 @@ ALTER TABLE `user`
 --
 
 --
+<<<<<<< HEAD
 -- AUTO_INCREMENT for table `poduk`
 --
 ALTER TABLE `poduk`
@@ -111,6 +122,8 @@ ALTER TABLE `umkm`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+=======
+>>>>>>> f8d9e1b0c1840139c46674e382b2353fa6fd999a
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
