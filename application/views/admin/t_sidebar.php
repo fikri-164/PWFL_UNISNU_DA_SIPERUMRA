@@ -19,6 +19,7 @@
   <link href="<?php echo base_url('assets/css/sb-admin-2.min.css'); ?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/ckeditor/ckeditor.js'); ?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.min.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/datatables/css/jquery.dataTables.min.css')?>" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -65,32 +66,45 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Jenis-jenis UMKM:</h6>
             <?php if($this->session->userdata('level')=='1'):?>
-            <a class="collapse-item" href="<?php echo base_url('c_page/umkm_mebel'); ?>">
+
+            
+            <a class="collapse-item" href="<?php echo base_url('c_page/uadmin/Mebel'); ?>">
               <i class="fas fa-fw fa-chair"></i>
               UMKM Mebel
             </a>
-            <a class="collapse-item" href="<?php echo base_url('c_page/umkm_kuliner'); ?>">
-              <i class="fas fa-fw fa-drumstick-bite"></i>
+            <a class="collapse-item" href="<?php echo base_url('c_page/uadmin/Kuliner'); ?>">
+              <i class="fas fa-fw fa-glass-cheers"></i>
               UMKM Kuliner
             </a>
-            <a class="collapse-item" href="<?php echo base_url('c_page/umkm_fashion'); ?>">
+            <a class="collapse-item" href="<?php echo base_url('c_page/uadmin/Fashion'); ?>">
               <i class="fas fa-fw fa-tshirt"></i>
               UMKM Fashion
             </a>
-            <a class="collapse-item" href="<?php echo base_url('c_page/umkm_kerajinan'); ?>">
+            <a class="collapse-item" href="<?php echo base_url('c_page/uadmin/Kerajinan'); ?>">
               <i class="fas fa-fw fa-shapes"></i>
               UMKM Kerajinan
             </a>
-            <!-- admin -->
-            <?php elseif($this->session->userdata('level')=='2'):?>
-            <a class="collapse-item" href="<?php echo base_url('c_page/umkm_fashion'); ?>">
+           
+            <!-- user -->
+            <?php elseif($this->session->userdata('ket')=='Fashion'):?>
+            <a class="collapse-item" href="<?php echo base_url('c_page/umkm_user'); ?>">
               <i class="fas fa-fw fa-tshirt"></i>
               UMKM Fashion
             </a>
-          <?php elseif($this->session->userdata('level')=='3'):?>
-            <a class="collapse-item" href="<?php echo base_url('c_page/umkm_kerajinan'); ?>">
-              <i class="fas fa-fw fa-tshirt"></i>
+            <?php elseif($this->session->userdata('ket')=='Kerajinan'):?>
+            <a class="collapse-item" href="<?php echo base_url('c_page/umkm_user'); ?>">
+              <i class="fas fa-fw fa-shapes"></i>
               UMKM Kerajinan
+            </a>
+            <?php elseif($this->session->userdata('ket')=='Mebel'):?>
+            <a class="collapse-item" href="<?php echo base_url('c_page/umkm_user'); ?>">
+              <i class="fas fa-fw fa-chair"></i>
+              UMKM Mebel
+            </a>
+            <?php elseif($this->session->userdata('ket')=='Kuliner'):?>
+            <a class="collapse-item" href="<?php echo base_url('c_page/umkm_user'); ?>">
+              <i class="fas fa-fw fa-glass-cheers"></i>
+              UMKM Kuliner
             </a>
           <?php endif;?>
           </div>
@@ -114,7 +128,7 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('c_page/web'); ?>">
+        <a class="nav-link" href="<?php echo base_url('c_web/'); ?>">
           <i class="fas fa-fw fa-globe"></i>
           <span>Lihat Web</span></a>
       </li>

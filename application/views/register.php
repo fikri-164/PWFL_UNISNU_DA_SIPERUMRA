@@ -24,13 +24,18 @@
 <body class="bg-gradient-warning">
 
   <div class="container">
-
     <!-- Outer Row -->
     <div class="row justify-content-center">
 
       <div class="col-xl-10 col-lg-12 col-md-9">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
+         <div id='notifications' >
+        <center><h7>
+        <?php echo $this->session->flashdata('berhasil');?>
+        <?php echo $this->session->flashdata('gagal');?>
+        </h7></center>
+        </div>
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
@@ -45,7 +50,7 @@
                     <h2 class="h4 text-gray-900 mb-4">PENDAFTARAN</h2>
                     <h1 class="h4 text-gray-900 mb-4">Silahkan Lengkapi Form Berikut</h1>
                   </div>
-                  <form action="<?php echo base_url('c_login/login'); ?>" method="post">
+                  <form action="<?php echo base_url('c_register/buat_akun'); ?>" method="post">
 
                     <center><b>NAMA PEMILIK UMKM</b></center>
                     <div class="input-group mb-3">
@@ -54,7 +59,7 @@
                           <i class="nav-icon fa fa-user"></i>
                         </span>
                       </div>
-                      <input class="form-control" type="text" placeholder="Nama Pemilik UMKM" name="nama_umkm">
+                      <input class="form-control" type="text" placeholder="Nama Pemilik UMKM" name="nama">
                     </div>
 
                     <center><b>NAMA UMKM</b></center>
@@ -64,8 +69,10 @@
                           <i class="nav-icon fa fa-user"></i>
                         </span>
                       </div>
-                      <input class="form-control" type="text" placeholder="Nama UMKN" name="password">
+                      <input class="form-control" type="text" placeholder="Nama UMKN" name="nama_umkm">
                     </div>
+
+                    <input class="form-control" type="hidden" placeholder="Nama UMKN" name="level" value="2">
 
                     <center><b>PASSWORD</b></center>
                     <div class="input-group mb-4">
@@ -84,7 +91,7 @@
                           <i class="nav-icon fa fa-list"></i>
                         </span>
                       </div>
-                      <select name="" class="form-control">
+                      <select name="ju" class="form-control">
                         <option value="Kerajinan" selected="kerajinan">Kerajinan
                         </option>
 
@@ -107,9 +114,7 @@
                           <i class="nav-icon fa fa-"></i>
                         </span>
                       </div>
-                      <textarea class="form-control">
-                        
-                      </textarea>
+                      <textarea name="profil" class="form-control"></textarea>
                     </div>
 
                     <center><b>CONTACT PERSON</b></center>
@@ -119,12 +124,14 @@
                           <i class="nav-icon fa fa-contact"></i>
                         </span>
                       </div>
-                      <input class="form-control" type="text" placeholder="Contoh : 0894433xxxx " name="password">
+                      <input class="form-control" type="text" placeholder="Contoh : 0894433xxxx " name="cp">
                     </div>
                   
-                    <button class="btn btn-primary btn-user btn-block" type="summit">Daftar</button>
+                    <button class="btn btn-primary btn-user btn-block" type="submit">Daftar</button>
                   </form>
-                  
+                  <div class="text-center">
+                    <a class="small" href="<?php echo base_url('c_login'); ?>">Sudah Punya Akun?</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -138,15 +145,24 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?= base_url('assets/vendor/jquery/jquery.min.js') ?>"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="<?= base_url('assets/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+  <script src="<?= base_url('assets/js/sb-admin-2.min.js') ?>"></script>
+  </script>
+  <script type="text/javascript">
+  $(function() {
 
+    $('#msg').slideDown('slow').delay(4000).slideUp('slow');
+  });
+  </script>
+  <script>   
+  $('#notifications').slideDown('slow').delay(3000).slideUp('slow');
+  </script>
 </body>
 
 </html>

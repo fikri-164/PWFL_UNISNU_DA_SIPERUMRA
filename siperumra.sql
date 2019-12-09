@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: 28 Okt 2019 pada 08.27
-=======
--- Generation Time: 22 Okt 2019 pada 09.57
->>>>>>> f8d9e1b0c1840139c46674e382b2353fa6fd999a
+-- Generation Time: 09 Des 2019 pada 19.49
 -- Versi Server: 10.1.28-MariaDB
 -- PHP Version: 5.6.32
 
@@ -29,18 +25,31 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
-<<<<<<< HEAD
--- Struktur dari tabel `poduk`
+-- Struktur dari tabel `produk`
 --
 
-CREATE TABLE `poduk` (
-  `id` int(50) NOT NULL,
+CREATE TABLE `produk` (
+  `id` int(11) NOT NULL,
   `nama_umkm` varchar(50) NOT NULL,
   `jenis_umkm` varchar(50) NOT NULL,
-  `nama_barang` varchar(50) NOT NULL,
-  `deskripsi_barang` text NOT NULL,
-  `harga_barang` varchar(15) NOT NULL
+  `nama_produk` varchar(50) NOT NULL,
+  `deskripsi_produk` text NOT NULL,
+  `harga_produk` varchar(50) NOT NULL,
+  `foto` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `produk`
+--
+
+INSERT INTO `produk` (`id`, `nama_umkm`, `jenis_umkm`, `nama_produk`, `deskripsi_produk`, `harga_produk`, `foto`) VALUES
+(1, 'bajuku', 'Fashion', 'Kerudung', 'banget', '50', ''),
+(4, 'suka', 'Kerajinan', 'Miniatur', 'rrrr', '55666', ''),
+(5, 'suka', 'Kerajinan', 'frame', 'tytyt', '4366', ''),
+(7, 'suka', 'Kerajinan', 'asd', 'fhfthh', '245456', ''),
+(8, 'bajuku', 'Fashion', 'Baju Kece', 'fdgfh', '5555', ''),
+(9, 'bajuku', 'Fashion', 'gg', 'dd', '5666', '13.png'),
+(10, 'bajuku', 'Fashion', 'dgd', 'tgtr', '56457', 'Screenshot_(2).png');
 
 -- --------------------------------------------------------
 
@@ -52,42 +61,52 @@ CREATE TABLE `umkm` (
   `id` int(11) NOT NULL,
   `nama_umkm` varchar(50) NOT NULL,
   `jenis_umkm` varchar(50) NOT NULL,
-  `profil` varchar(50) NOT NULL,
+  `profil` text NOT NULL,
   `cp` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `umkm`
+--
+
+INSERT INTO `umkm` (`id`, `nama_umkm`, `jenis_umkm`, `profil`, `cp`) VALUES
+(2, 'bajuku', 'Fashion', '<p>bajuku adalah</p>\r\n', '0000456'),
+(3, 'suka', 'Kerajinan', '<p>llll</p>\r\n', '0982782'),
+(4, 'mebelku', 'Mebel', 'shdhdd', '098436346');
 
 -- --------------------------------------------------------
 
 --
-=======
->>>>>>> f8d9e1b0c1840139c46674e382b2353fa6fd999a
 -- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `nama_pemilik` varchar(50) NOT NULL,
+  `nama` varchar(50) NOT NULL,
   `nama_umkm` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `level` int(11) NOT NULL
+  `level` int(11) NOT NULL,
+  `ket` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `user`
 --
 
-INSERT INTO `user` (`id`, `nama_pemilik`, `nama_umkm`, `password`, `level`) VALUES
-(1, 'fikri', 'suka', '21232f297a57a5a743894a0e4a801fc3', 1);
+INSERT INTO `user` (`id`, `nama`, `nama_umkm`, `password`, `level`, `ket`) VALUES
+(1, 'fikri', 'admin', '21232f297a57a5a743894a0e4a801fc3', 1, 'admin'),
+(2, 'shihab', 'bajuku', 'ee11cbb19052e40b07aac0ca060c23ee', 2, 'Fashion'),
+(3, 'dicky', 'suka', 'ee11cbb19052e40b07aac0ca060c23ee', 2, 'Kerajinan'),
+(6, 'cemong', 'mebelku', 'ee11cbb19052e40b07aac0ca060c23ee', 2, 'Mebel');
 
 --
 -- Indexes for dumped tables
 --
 
 --
-<<<<<<< HEAD
--- Indexes for table `poduk`
+-- Indexes for table `produk`
 --
-ALTER TABLE `poduk`
+ALTER TABLE `produk`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -97,8 +116,6 @@ ALTER TABLE `umkm`
   ADD PRIMARY KEY (`id`);
 
 --
-=======
->>>>>>> f8d9e1b0c1840139c46674e382b2353fa6fd999a
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -109,25 +126,22 @@ ALTER TABLE `user`
 --
 
 --
-<<<<<<< HEAD
--- AUTO_INCREMENT for table `poduk`
+-- AUTO_INCREMENT for table `produk`
 --
-ALTER TABLE `poduk`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `produk`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `umkm`
 --
 ALTER TABLE `umkm`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
-=======
->>>>>>> f8d9e1b0c1840139c46674e382b2353fa6fd999a
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

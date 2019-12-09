@@ -19,24 +19,7 @@
     <i class="fas fa-angle-up"></i>
   </a>
 
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="<?php echo base_url('c_login/logout'); ?>">Logout</a>
-        </div>
-      </div>
-    </div>
-  </div>
+
 
   <!-- Bootstrap core JavaScript-->
   <script src="<?php echo base_url ('assets/vendor/jquery/jquery.min.js')?>"></script>
@@ -64,6 +47,46 @@
   <script src="<?php echo base_url('assets/js/demo/datatables-demo.js') ?>"></script>
 
 
+  <script src="<?php echo base_url('assets/jquery/jquery-2.2.3.min.js')?>"></script>
+  <script src="<?php echo base_url('assets/datatables/js/jquery.dataTables.min.js')?>"></script>
+  <script type="text/javascript">
+      var table;
+      $(document).ready(function() {
+   
+          //datatables
+          table = $('#table').DataTable({ 
+   
+              "processing": true, 
+              "serverSide": true, 
+              "order": [], 
+               
+              "ajax": {
+                  "url": "<?php echo site_url('c_dt_serverside/get_data_user')?>",
+                  "type": "POST"
+              },
+   
+               
+              "columnDefs": [
+              { 
+                  "targets": [ 0 ], 
+                  "orderable": false, 
+              },
+              ],
+   
+          });
+   
+      });
+   
+  </script>
+  <script type="text/javascript">
+  $(function() {
+
+    $('#msg').slideDown('slow').delay(4000).slideUp('slow');
+  });
+  </script>
+  <script>   
+  $('#notifications').slideDown('slow').delay(3000).slideUp('slow');
+  </script>
 </body>
 
 </html>

@@ -24,16 +24,25 @@
 <body class="bg-gradient-warning">
 
   <div class="container">
-
+    
     <!-- Outer Row -->
     <div class="row justify-content-center">
 
       <div class="col-xl-10 col-lg-12 col-md-9">
 
-        <div class="card o-hidden border-0 shadow-lg my-5">
+        
+        <div class="card o-hidden border-0 shadow-lg my-5"> 
+
+       <div id='notifications' >
+        <center><h7>
+        <?php echo $this->session->flashdata('berhasil');?>
+        <?php echo $this->session->flashdata('gagal');?>
+        </h7></center>
+        </div>
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
+
               <div class="col-lg-6 d-none d-lg-block ">
                 <img style="margin:20px " width="100%" src="<?php echo base_url('assets/img/SI PERUMRA.PNG'); ?>">
               </div>
@@ -63,19 +72,12 @@
                       </div>
                       <input class="form-control" type="password" placeholder="Password" name="password">
                     </div>
-                    <center><b>CAPTCHA</b></center>
-                    <div class="input-group mb-4">
-                      <div class="input-group-prepend">
-                        <span style="padding-left:80px;font-size:30px; color:blue;"><?php echo $image ?></span>
-                          <!--<p>*samakan Captcha dengan di atas</p>-->
-                      </div>
-                      <input type="text" name="txt_chaptca_real">
-                    </div>
+          
                     <button class="btn btn-primary btn-user btn-block" type="summit">Login</button>
                   </form>
                   <hr>
                   <div class="text-center">
-                    <a class="small" href="<?php echo base_url('c_register/register'); ?>">Create an Account!</a>
+                    <a class="small" href="<?php echo base_url('c_register/'); ?>">Create an Account!</a>
                   </div>
                 </div>
               </div>
@@ -90,15 +92,24 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?= base_url('assets/vendor/jquery/jquery.min.js') ?>"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="<?= base_url('assets/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+  <script src="<?= base_url('assets/js/sb-admin-2.min.js') ?>"></script>
+  </script>
+  <script type="text/javascript">
+  $(function() {
 
+    $('#msg').slideDown('slow').delay(4000).slideUp('slow');
+  });
+  </script>
+  <script>   
+  $('#notifications').slideDown('slow').delay(3000).slideUp('slow');
+  </script>
 </body>
 
 </html>

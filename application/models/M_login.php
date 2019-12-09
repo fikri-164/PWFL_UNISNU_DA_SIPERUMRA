@@ -12,7 +12,9 @@ class M_login extends CI_Model {
 		if ($hasil->num_rows() > 0) {
 			return $hasil->row();
 		}else {
-			return false;
+			$this->session->set_flashdata('gagal','<a class="card bg-danger text-white shadow">login gagal! silahkan cek username dan password anda!</a>');
+					redirect('c_login','refresh');
+			// return false;
 		}
 	}
 }
