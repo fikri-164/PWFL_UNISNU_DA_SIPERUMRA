@@ -18,7 +18,7 @@
   <!-- Custom styles for this template-->
   <link href="<?php echo base_url('assets/css/sb-admin-2.min.css'); ?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/ckeditor/ckeditor.js'); ?>" rel="stylesheet">
-
+  <link href="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.min.css'); ?>" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -64,7 +64,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Jenis-jenis UMKM:</h6>
-
+            <?php if($this->session->userdata('level')=='1'):?>
             <a class="collapse-item" href="<?php echo base_url('c_page/umkm_mebel'); ?>">
               <i class="fas fa-fw fa-chair"></i>
               UMKM Mebel
@@ -81,30 +81,23 @@
               <i class="fas fa-fw fa-shapes"></i>
               UMKM Kerajinan
             </a>
+            <!-- admin -->
+            <?php elseif($this->session->userdata('level')=='2'):?>
+            <a class="collapse-item" href="<?php echo base_url('c_page/umkm_fashion'); ?>">
+              <i class="fas fa-fw fa-tshirt"></i>
+              UMKM Fashion
+            </a>
+          <?php elseif($this->session->userdata('level')=='3'):?>
+            <a class="collapse-item" href="<?php echo base_url('c_page/umkm_kerajinan'); ?>">
+              <i class="fas fa-fw fa-tshirt"></i>
+              UMKM Kerajinan
+            </a>
+          <?php endif;?>
           </div>
         </div>
       </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fas fa-fw fa-wrench"></i>
-          <span>USER</span>
-        </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Jenis User:</h6>
-            <a class="collapse-item" href="utilities-color.html">
-              <i class="fas fa-fw fa-user-alt"></i>
-            Admin
-            </a>
-            <a class="collapse-item" href="utilities-border.html">
-              <i class="fas fa-fw fa-users"></i>
-            UMKM
-            </a>
-          </div>
-        </div>
-      </li>
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url('c_page/profil'); ?>">
           <i class="fas fa-fw fa-table"></i>
@@ -125,32 +118,30 @@
           <i class="fas fa-fw fa-globe"></i>
           <span>Lihat Web</span></a>
       </li>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+      <?php if($this->session->userdata('level')=='1'):?>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>USER</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">User Menu : </h6>
-            <a class="collapse-item" href="login.html">Lihat WEB</a>
-            <div class="collapse-divider"></div>
-            <h6 class="collapse-header">Other Pages:</h6>
-            <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
+          
+            <h6 class="collapse-header">Jenis User:</h6>
+            <a class="collapse-item" href="utilities-color.html">
+              <i class="fas fa-fw fa-user-alt"></i>
+            Admin
+            </a>
+            <a class="collapse-item" href="utilities-border.html">
+              <i class="fas fa-fw fa-users"></i>
+            UMKM
+            </a>
+           
           </div>
         </div>
       </li>
-
+      <?php endif;?>
       <!-- Nav Item - Charts -->
-      <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span></a>
-      </li>
-
-      <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Tables</span></a>
-      </li>
-
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
@@ -158,7 +149,7 @@
       <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
       </div>
-
+      
     </ul>
     <!-- End of Sidebar -->
 

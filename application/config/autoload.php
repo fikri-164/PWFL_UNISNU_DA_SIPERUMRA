@@ -87,9 +87,9 @@ $autoload['drivers'] = array();
 | -------------------------------------------------------------------
 | Prototype:
 |
-|	$autoload['helper'] = array('url', 'file');
+|	$autoload['helper'] = array('url', 'file'chaptca);
 */
-$autoload['helper'] = array('url');
+$autoload['helper'] = array('url','captcha','form');
 
 /*
 | -------------------------------------------------------------------
@@ -132,4 +132,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('M_login');
+$autoload['model'] = array('M_login','M_umkm');

@@ -41,19 +41,32 @@
                 <div class="p-5">
 
                   <div class="text-center">
-                  <img src="<?php echo base_url('assets/img/SI PERUMRA.PNG'); ?>" width="80px" ><br/>
-                    <h1 class="h4 text-gray-900 mb-4">Selamat Datang!</h1>
+                  <!-- <img src="<?php echo base_url('assets/img/SI PERUMRA.PNG'); ?>" width="80px" ><br/> -->
+                    <h2 class="h4 text-gray-900 mb-4">PENDAFTARAN</h2>
+                    <h1 class="h4 text-gray-900 mb-4">Silahkan Lengkapi Form Berikut</h1>
                   </div>
                   <form action="<?php echo base_url('c_login/login'); ?>" method="post">
-                    <center><b>NAMA UMKM</b></center>
+
+                    <center><b>NAMA PEMILIK UMKM</b></center>
                     <div class="input-group mb-3">
                       <div class="input-group-prepend">
                         <span class="input-group-text">
                           <i class="nav-icon fa fa-user"></i>
                         </span>
                       </div>
-                      <input class="form-control" type="text" placeholder="Nama UMKM" name="nama_umkm">
+                      <input class="form-control" type="text" placeholder="Nama Pemilik UMKM" name="nama_umkm">
                     </div>
+
+                    <center><b>NAMA UMKM</b></center>
+                    <div class="input-group mb-4">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="nav-icon fa fa-user"></i>
+                        </span>
+                      </div>
+                      <input class="form-control" type="text" placeholder="Nama UMKN" name="password">
+                    </div>
+
                     <center><b>PASSWORD</b></center>
                     <div class="input-group mb-4">
                       <div class="input-group-prepend">
@@ -61,22 +74,57 @@
                           <i class="nav-icon fa fa-lock"></i>
                         </span>
                       </div>
-                      <input class="form-control" type="password" placeholder="Password" name="password">
+                      <input class="form-control" type="password" placeholder="password" name="password">
                     </div>
-                    <center><b>CAPTCHA</b></center>
+
+                    <center><b>JENIS UMKM</b></center>
                     <div class="input-group mb-4">
                       <div class="input-group-prepend">
-                        <span style="padding-left:80px;font-size:30px; color:blue;"><?php echo $image ?></span>
-                          <!--<p>*samakan Captcha dengan di atas</p>-->
+                        <span class="input-group-text">
+                          <i class="nav-icon fa fa-list"></i>
+                        </span>
                       </div>
-                      <input type="text" name="txt_chaptca_real">
+                      <select name="" class="form-control">
+                        <option value="Kerajinan" selected="kerajinan">Kerajinan
+                        </option>
+
+                        <option value="Fashion" selected="fashion">Fashion
+                        </option>
+
+                        <option value="Kuliner" selected="kuliner">Kuliner
+                        </option>
+
+                        <option value="Mebel" selected="mebel">Mebel
+                        </option>
+
+                      </select>
                     </div>
-                    <button class="btn btn-primary btn-user btn-block" type="summit">Login</button>
+
+                    <center><b>PROFILE UMKM</b></center>
+                    <div class="input-group mb-4">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="nav-icon fa fa-"></i>
+                        </span>
+                      </div>
+                      <textarea class="form-control">
+                        
+                      </textarea>
+                    </div>
+
+                    <center><b>CONTACT PERSON</b></center>
+                    <div class="input-group mb-4">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="nav-icon fa fa-contact"></i>
+                        </span>
+                      </div>
+                      <input class="form-control" type="text" placeholder="Contoh : 0894433xxxx " name="password">
+                    </div>
+                  
+                    <button class="btn btn-primary btn-user btn-block" type="summit">Daftar</button>
                   </form>
-                  <hr>
-                  <div class="text-center">
-                    <a class="small" href="<?php echo base_url('c_register/register'); ?>">Create an Account!</a>
-                  </div>
+                  
                 </div>
               </div>
             </div>
